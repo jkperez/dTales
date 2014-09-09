@@ -1,6 +1,8 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
+  belongs_to :user
+  belongs_to :notes 
   # GET /notes
   # GET /notes.json
   def index
